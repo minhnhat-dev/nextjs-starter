@@ -20,7 +20,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Button as ButtonMaterial } from '@mui/material';
-
+import { device } from '../../src/constants'
 interface State {
     showPassword: boolean;
     isRemember: boolean;
@@ -51,6 +51,11 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   padding: 1rem;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `
 
 const ImageWrap = styled.span`
@@ -70,6 +75,7 @@ const BoxLeft = styled.div`
 const BoxRight = styled.div`
     flex: 2;
     flex-direction: column;
+    padding: 1.5rem;
 `
 
 const Header = styled.div`
@@ -77,8 +83,6 @@ const Header = styled.div`
     height: 3rem;
     width: 100%;
     justify-content: flex-end;
-    margin-top: 1.5rem;
-
 `
 const TitleHeader = styled.span`
     font-size: 0.875rem;

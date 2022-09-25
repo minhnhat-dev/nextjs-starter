@@ -16,3 +16,7 @@
 .btn-twitter {
     color: rgb(28, 156, 234);
 }
+
+@media only screen and (min-width: 600px) {
+    
+}
